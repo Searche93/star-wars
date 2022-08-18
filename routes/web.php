@@ -14,5 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+// People
+Route::get('/people', [App\Http\Controllers\PeopleController::class, 'index'])->name('people.index');
+
+// Planets
+Route::get('/planets', [App\Http\Controllers\PlanetsController::class, 'index'])->name('planets.index');
+
+// Species
+Route::get('/species', [App\Http\Controllers\SpeciesController::class, 'index'])->name('species.index');
